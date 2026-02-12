@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: circleci-container-agent
-  namespace: argocd
+  namespace: circleci
 spec:
   generators:
     - clusters: {}
@@ -12,7 +12,7 @@ spec:
     spec:
       destination:
         name: in-cluster
-        namespace: argocd
+        namespace: circleci
       source:
         repoURL: https://github.com/liquorichris/argo.git
         path: circleci-container-agent
