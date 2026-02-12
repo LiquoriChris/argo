@@ -1,4 +1,4 @@
 agent:
   resourceClasses:
-    liquorichris/container-agent:
+    liquorichris/container-agent
   customSecret: circleci-agent-token
