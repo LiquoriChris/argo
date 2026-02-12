@@ -1,5 +1,5 @@
-agent:
-  resourceClasses:
-    liquorichris/class:
-      token: 38f255155fb81f5e77ea09ac8802ad05781c11694f1a0251fdc940bf2ef1b2ed31220180ae78bed6
-  # customSecret: circleci-agent-token
+container-agent
+  agent:
+    resourceClasses:
+      liquorichris/class:
+    customSecret: circleci-agent-token
