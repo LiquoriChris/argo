@@ -2,6 +2,6 @@ releases:
   - name: circleci-container-agent
     chart: container-agent/container-agent
     version: 101.1.6
-    namespace: circleci
+    namespace: argocd
     values:
       - values.yaml
