@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: circleci-runner
+  name: circleci-container-agent
   namespace: argocd
 spec:
   generators:
