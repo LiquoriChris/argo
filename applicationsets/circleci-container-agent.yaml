@@ -2,9 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: circleci-runner
+  namespace: argocd
 spec:
   generators:
-    - list:
+    - git:
+        repoURL: https://github.com/liquorichris/argo.git
+        revision: HEAD
+        directories:
+          - path: 'circleci-container-agent/*'
   template:
     metadata:
       name: circleci-runner
@@ -14,7 +19,7 @@ spec:
         namespace: circleci
       source:
         repoURL: https://github.com/liquorichris/argo.git
-        path: circleci-container-agent
+        path: 'circleci-container-agent'
         targetRevision: HEAD
         helm:
           values: |-
