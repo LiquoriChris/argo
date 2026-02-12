@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - cluseters: {}
+    - clusters: {}
   template:
     metadata:
       name: circleci-runner
@@ -18,8 +18,11 @@ spec:
         path: 'circleci-container-agent'
         targetRevision: HEAD
         helm:
-          valueFiles:
-            - values.yaml
+          values:
+            agent:
+              resourceClasses:
+                liquorichris/class:
+              customSecret: circleci-agent-token
       project: default
       syncPolicy:
         automated:
