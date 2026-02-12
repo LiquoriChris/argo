@@ -1,4 +1,4 @@
-container-agent
+container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
