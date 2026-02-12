@@ -5,7 +5,10 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - clusters: {}
+    - list:
+        elements:
+          - cluster: in-cluster
+            namespace: circleci
   template:
     metadata:
       name: circleci-container-agent

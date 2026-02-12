@@ -12,4 +12,4 @@ appVersion: "0.0.1"
 dependencies:
   - name: container-agent
     version: 101.1.6
-    repository: http://packagecloud.io/circleci/container-agent/helm
+    repository: https://packagecloud.io/circleci/container-agent/helm
