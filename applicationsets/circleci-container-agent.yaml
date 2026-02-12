@@ -5,11 +5,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - git:
-        repoURL: https://github.com/liquorichris/argo.git
-        revision: HEAD
-        directories:
-          - path: 'circleci-container-agent/*'
+    - cluseters: {}
   template:
     metadata:
       name: circleci-runner
