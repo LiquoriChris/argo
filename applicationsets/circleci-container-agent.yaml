@@ -18,11 +18,8 @@ spec:
         path: 'circleci-container-agent'
         targetRevision: HEAD
         helm:
-          values: |
-            agent:
-              resourceClasses:
-                liquorichris/class:
-              customSecret: circleci-agent-token
+          valueFiles:
+            - values.yaml
       project: default
       syncPolicy:
         automated:
