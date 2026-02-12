@@ -8,7 +8,7 @@ spec:
     - clusters: {}
   template:
     metadata:
-      name: circleci-runner
+      name: circleci-conatiner-agent
     spec:
       destination:
         name: in-cluster
