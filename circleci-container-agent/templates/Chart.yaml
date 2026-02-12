@@ -8,3 +8,8 @@ version: 1.0.0
 
 # This is the version number of the application being deployed.
 appVersion: "0.0.1"
+
+dependencies:
+  - name: container-agent
+    version: 101.1.6
+    repository: http://packagecloud.io/circleci/container-agent/helm

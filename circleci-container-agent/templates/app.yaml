@@ -1,26 +1,26 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: circleci-runner
-spec:
-  destination:
-    name: in-cluster
-    namespace: circleci
-  source:
-    path: ''
-    repoURL: http://packagecloud.io/circleci/container-agent/helm
-    targetRevision: 101.1.6
-    chart: container-agent
-    helm:
-      values: |-
-        agent:
-          resourceClasses:
-            liquorichris/test:
-          customSecret: circleci-agent-token
-  sources: []
-  project: default
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: true
-      enabled: true
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: circleci-runner
+# spec:
+#   destination:
+#     name: in-cluster
+#     namespace: circleci
+#   source:
+#     path: ''
+#     repoURL: http://packagecloud.io/circleci/container-agent/helm
+#     targetRevision: 101.1.6
+#     chart: container-agent
+#     helm:
+#       values: |-
+#         agent:
+#           resourceClasses:
+#             liquorichris/test:
+#           customSecret: circleci-agent-token
+#   sources: []
+#   project: default
+#   syncPolicy:
+#     automated:
+#       prune: false
+#       selfHeal: true
+#       enabled: true

@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: circleci-runner
+spec:
+  generators:
+    - list:
+  template:
+    metadata:
+      name: circleci-runner
+    spec:
+      destination:
+        name: in-cluster
+        namespace: circleci
+      source:
+        repoURL: git@github.com:liquorichris/argo
+        helm:
+          values: |-
+            agent:
+              resourceClasses:
+                liquorichris/container-agent:
+              customSecret: circleci-agent-token
+      sources: []
+      project: default
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+          enabled: true
