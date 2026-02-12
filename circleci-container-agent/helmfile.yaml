@@ -1,12 +1,7 @@
-repositories:
-  - name: circleci-container-agent
-    url: http://packagecloud.io/circleci/container-agent
-
 releases:
   - name: circleci-container-agent
-    chart: container-agent
+    chart: container-agent/container-agent
     version: 101.1.6
-    repository: circleci-container-agent
     namespace: circleci
     values:
       - values.yaml
