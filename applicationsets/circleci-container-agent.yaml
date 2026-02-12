@@ -13,7 +13,9 @@ spec:
         name: in-cluster
         namespace: circleci
       source:
-        repoURL: git@github.com:liquorichris/argo
+        repoURL: https://github.com/liquorichris/argo.git
+        path: circleci-container-agent
+        targetRevision: HEAD
         helm:
           values: |-
             agent:
