@@ -17,6 +17,8 @@ spec:
         repoURL: https://github.com/liquorichris/argo.git
         path: circleci-container-agent
         targetRevision: HEAD
+        plugin:
+          name: helmfile
       project: default
       syncPolicy:
         automated:
