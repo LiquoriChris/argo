@@ -22,10 +22,7 @@ spec:
               resourceClasses:
                 liquorichris/container-agent:
               customSecret: circleci-agent-token
-      sources: []
       project: default
       syncPolicy:
         automated:
-          prune: false
           selfHeal: true
-          enabled: true
