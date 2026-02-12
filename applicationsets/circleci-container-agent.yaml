@@ -10,8 +10,6 @@ spec:
     metadata:
       name: circleci-container-agent
     spec:
-      syncOptions:
-        - CreateNamespace=true 
       destination:
         name: in-cluster
         namespace: argocd
@@ -26,3 +24,5 @@ spec:
       syncPolicy:
         automated:
           selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
