@@ -22,7 +22,7 @@ spec:
         path: 'circleci-container-agent'
         targetRevision: HEAD
         helm:
-          valuesFiles:
+          valueFiles:
             - values.yaml
       project: default
       syncPolicy:
