@@ -15,7 +15,7 @@ spec:
         namespace: circleci
       source:
         repoURL: https://github.com/liquorichris/argo.git
-        path: 'circleci-container-agent'
+        # path: circleci-container-agent
         targetRevision: HEAD
         helm:
           valueFiles:
