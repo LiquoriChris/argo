@@ -21,8 +21,12 @@ spec:
         path: circleci-container-agent
         targetRevision: HEAD
         helm:
-          valueFiles:
-            - values.yaml
+          values:
+            container-agent:
+              agent:
+                resourceClasses:
+                  liquorichris/class:
+                    token: circleci-container-agent@azurekeyvault
       project: default
       syncPolicy:
         automated:
