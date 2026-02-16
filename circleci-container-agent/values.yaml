@@ -1,5 +1,4 @@
-container-agent:
-  agent:
-    resourceClasses:
-      liquorichris/class:
-        token: "circleci-agent-token@azurekeyvault"
+agent:
+  resourceClasses:
+    liquorichris/class:
+      token: circleci-agent-token@azurekeyvault
