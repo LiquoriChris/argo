@@ -2,7 +2,9 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-    customSecret: circleci-container-agent
+        annotations:
+          azure-key-vault-to-kubernetes/inject: "true"
+          azure-key-vault-to-kubernetes/secret-name: circelci-agent-token
   spec:
     securityContext:
       runAsNonRoot: true
