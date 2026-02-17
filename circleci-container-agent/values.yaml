@@ -2,4 +2,4 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-    customSecret: circleci-container-agent
+    customSecret: akv2k8s-circleci-container-agent
