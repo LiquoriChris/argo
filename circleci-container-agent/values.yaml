@@ -1,8 +1,8 @@
 container-agent:
   agent:
     resourceClasses:
-      metadata:
-        annotations:
-          azure-keyvault-env-inject: "true"
       liquorichris/class:
         token: circleci-agent-token@azurekeyvault
+        metadata:
+          annotations:
+            azure-keyvault-env-inject: "true"
