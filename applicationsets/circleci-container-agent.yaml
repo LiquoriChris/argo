@@ -11,7 +11,7 @@ spec:
             namespace: circleci
   template:
     metadata:
-      name: circleci-agent-token
+      name: circleci-container-agent
     spec:
       destination:
         name: in-cluster
