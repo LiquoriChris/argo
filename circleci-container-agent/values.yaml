@@ -2,7 +2,7 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-    custonSecret: circleci-container-agent
-  # spec:
-  #   securityContext:
-  #     runAsNonRoot: true
+    customSecret: circleci-container-agent
+  spec:
+    securityContext:
+      runAsNonRoot: true
