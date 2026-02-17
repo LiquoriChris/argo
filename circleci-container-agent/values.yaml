@@ -2,4 +2,4 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-    token: Y2lyY2xlY2ktYWdlbnQtdG9rZW5AYXp1cmVrZXl2YXVsdA==
+        token: Y2lyY2xlY2ktYWdlbnQtdG9rZW5AYXp1cmVrZXl2YXVsdA==
