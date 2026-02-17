@@ -2,6 +2,6 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-        token: AKV2K8S
+        token: CIRCLECI_RUNNER_TOKEN
     environment:
-      AKV2K8S: circleci-container-agent@azurekeyvault
+      CIRCLECI_RUNNER_TOKEN: circleci-agent-token@azurekeyvault
