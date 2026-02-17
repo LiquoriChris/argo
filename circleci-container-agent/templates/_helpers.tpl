@@ -71,12 +71,6 @@ RBAC names
 {{- end }}
 {{- end }}
 
-{{- define "container-agent.create-secret" -}}
-{{- if include "container-agent.tokens" . -}}
-true
-{{- end }}
-{{- end }}
-
 {{- define "container-agent.token-secret" -}}
 {{- if .Values.agent.customSecret }}
 {{- .Values.agent.customSecret -}}
