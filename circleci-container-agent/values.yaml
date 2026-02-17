@@ -5,4 +5,4 @@ container-agent:
         token: circleci-agent-token@azurekeyvault
         metadata:
           annotations:
-            azure-keyvault-env-inject: "true"
+            azure-key-vault-env-injection: enabled
