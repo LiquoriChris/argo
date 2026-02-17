@@ -6,5 +6,6 @@ container-agent:
     securityContext:
       runAsNonRoot: true
       podAnnotations:
-        azure-key-vault-to-kubernetes/inject: "true"
-        azure-key-vault-to-kubernetes/secret-name: circelci-agent-token
+        metadata:
+          azure-key-vault-to-kubernetes/inject: "true"
+          azure-key-vault-to-kubernetes/secret-name: circelci-agent-token
