@@ -12,8 +12,6 @@ spec:
   template:
     metadata:
       name: circleci-container-agent
-      annotations:
-        azure-keyvault-env-inject: "true"
     spec:
       destination:
         name: in-cluster
