@@ -2,6 +2,7 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-        token: KUBE_TOKEN_SECRETS
+        token: CIRCLECI_RUNNER_TOKEN
     environment:
-      KUBE_TOKEN_SECRETS: circleci-agent-token@azurekeyvault
+      CIRCLECI_RUNNER_TOKEN: circleci-agent-token@azurekeyvault
+      KUBE_TOKEN_SECRETS: CIRCLECI_RUNNER_TOKEN
