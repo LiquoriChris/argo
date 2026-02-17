@@ -2,10 +2,9 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-        metadata:
-          annotations:
-            azure-key-vault-to-kubernetes/inject: "true"
-            azure-key-vault-to-kubernetes/secret-name: circelci-agent-token
   spec:
     securityContext:
       runAsNonRoot: true
+      podAnnotations:
+        azure-key-vault-to-kubernetes/inject: "true"
+        azure-key-vault-to-kubernetes/secret-name: circelci-agent-token
