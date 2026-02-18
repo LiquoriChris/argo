@@ -63,7 +63,7 @@ RBAC names
 
 {{- define "container-agent.tokens" -}}
 {{- range $rc, $value := .Values.agent.resourceClasses -}}
-{{- .Values.agent.tokenSecrets }}
+{{- .Values.agent.tokenSecrets -}}
 {{- end }}
 {{- end }}
 
