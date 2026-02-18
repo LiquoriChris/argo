@@ -5,4 +5,4 @@ container-agent:
         spec:
           securityContext:
             runAsNonRoot: true
-    customSecret: circleci-agent-container@azurekeyvault
+    customSecret: circleci-container-agent@azurekeyvault
