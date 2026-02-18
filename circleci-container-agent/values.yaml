@@ -192,29 +192,11 @@ agent:
   # -- Resource class settings. The tokens specified here will be used to claim tasks & the tasks
   # will be launched with the configured configs
   # Ref: https://circleci.com/docs/container-runner/#resource-class-configuration-custom-pod
-  resourceClasses: {}
+  resourceClasses:
     liquorichris.class:
-    #   token: XXXX
-    #   metadata:
-    #     annotations:
-    #       custom.io: my-annotation
       spec:
-    #     containers:
-    #       - resources:
-    #           limits:
-    #             cpu: 500m
-    #         volumeMounts:
-    #           - name: xyz
-    #             mountPath: /path/to/mount
         securityContext:
           runAsNonRoot: true
-    #     imagePullSecrets:
-    #       - name: my_cred
-    # circleci-runner/resourceClass2:
-    #   token: XXXX
-    #   spec:
-    #     imagePullSecrets:
-    #       - name: "other"
 
   # -- Configuration for service containers. This allows different a different container spec to be passed
   # to your job's service containers. TODO: Full docs link
