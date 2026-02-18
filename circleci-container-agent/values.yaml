@@ -3,4 +3,6 @@ container-agent:
     resourceClasses:
       liquorichris/class:
         token: circleci-agent-token@azurekeyvault
-    forceUpdate: true
+        spec:
+          securityContext:
+            runAsNonRoot: true
