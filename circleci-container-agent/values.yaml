@@ -2,6 +2,4 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-    customSecret:
-    environment:
-      KUBE_TOKEN_SECRETS: circleci-agent-token@azurekeyvault
+    customSecret: circleci-container-agent
