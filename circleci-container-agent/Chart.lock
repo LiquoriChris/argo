@@ -1,6 +1,0 @@
-dependencies:
-- name: container-agent
-  repository: https://packagecloud.io/circleci/container-agent/helm
-  version: 101.1.7
-digest: sha256:0f9afd12830c6bb254b7f2388715d8d1b4bf7461f205279d9788532228d3e3a4
-generated: "2026-02-18T14:16:42.683863-05:00"
