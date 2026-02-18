@@ -5,6 +5,6 @@ container-agent:
         spec:
           securityContext:
             runAsNonRoot: true
-    customSecret: circleci-container-agent@azurekeyvault
+    # customSecret: circleci-container-agent@azurekeyvault
     environment:
       KUBE_TOKEN_SECRETS: circleci-container-agent@azurekeyvault
