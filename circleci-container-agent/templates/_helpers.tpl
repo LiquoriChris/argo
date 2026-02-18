@@ -73,7 +73,7 @@ RBAC names
 
 {{- define "container-agent.create-secret" -}}
 {{- if include "container-agent.tokens" . -}}
-true
+false
 {{- end }}
 {{- end }}
 
