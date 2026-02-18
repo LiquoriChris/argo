@@ -66,8 +66,6 @@ RBAC names
 {{- .Values.agent.tokenSecrets }}
 {{- end }}
 {{- end }}
-{{- end }}
-{{- end }}
 
 {{/*
 {{- define "container-agent.create-secret" -}}
