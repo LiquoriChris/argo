@@ -2,7 +2,9 @@ container-agent:
   agent:
     resourceClasses:
       liquorichris/class:
-        token: circleci-container-agent@azurekeyvault
+        token: LIQUORICHRIS_CLASS
         spec:
           securityContext:
             runAsNonRoot: true
+    environment:
+      LIQUORICHRIS_CLASS: circleci-container-agent@azurekeyvault
