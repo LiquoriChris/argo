@@ -79,7 +79,7 @@ spec:
             - name: KUBE_TASK_POD_CONFIG
               value: /etc/container-agent/taskpods
             - name: KUBE_TOKEN_SECRETS
-              value: {{- if .Values.agent.tokenSecrets }}{{ printf "%s-token" $fullName }}{{-end-}
+              value: {{ .Values.agent.tokenSecrets | quote }}
             {{- with .Values.logging.image }}
             - name: KUBE_LOGGING_IMAGE
               value: "{{- if .registry -}}{{ .registry }}/{{- end -}}{{ .repository }}:{{ .tag }}"
