@@ -78,8 +78,13 @@ spec:
               value: {{ .Release.Namespace | quote }}
             - name: KUBE_TASK_POD_CONFIG
               value: /etc/container-agent/taskpods
-            - name: KUBE_TOKEN_SECRETS
-              value: {{ .Values.agent.tokenSecrets | quote }}
+            # - name: KUBE_TOKEN_SECRETS
+            #   value: {{- if .Values.agent.customSecret -}}
+            #         {{- printf " %s" .Values.agent.customSecret -}},
+            #         {{- end }}
+            #         {{- if include "container-agent.create-secret" . -}}
+            #         {{- printf " %s" $fullName -}}
+            #         {{- end }}
             {{- with .Values.logging.image }}
             - name: KUBE_LOGGING_IMAGE
               value: "{{- if .registry -}}{{ .registry }}/{{- end -}}{{ .repository }}:{{ .tag }}"

@@ -63,19 +63,19 @@ RBAC names
 
 {{- define "container-agent.tokens" -}}
 {{- range $rc, $value := .Values.agent.resourceClasses -}}
-{{- range $key, $value := $value -}}
-{{- if eq $key "token" }}
-{{ $rc | replace "/" "." }}: {{ $value | b64enc }}
+{{- .Values.agent.tokenSecrets }}
 {{- end }}
 {{- end }}
 {{- end }}
 {{- end }}
 
+{{/*
 {{- define "container-agent.create-secret" -}}
 {{- if include "container-agent.tokens" . -}}
 true
 {{- end }}
 {{- end }}
+/*}}
 
 {{- define "container-agent.token-secret" -}}
 {{- if .Values.agent.customSecret }}
