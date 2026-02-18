@@ -5,5 +5,5 @@ container-agent:
     # customSecret: circleci-container-agent
     environment:
       AUTH_TOKEN: circleci-agent-token@azurekeyvault
-  log:
-    level: debug
+    log:
+      level: debug
