@@ -3,8 +3,3 @@ container-agent:
     resourceClasses:
       liquorichris/class:
         token: circleci-agent-token@azurekeyvault
-        spec:
-          securityContext:
-            runAsNonRoot: true
-  labels:
-    azure-key-vault-env-injection=enabled
