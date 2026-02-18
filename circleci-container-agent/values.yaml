@@ -6,5 +6,5 @@ container-agent:
         spec:
           securityContext:
             runAsNonRoot: true
-    labels:
-      azure-key-vault-env-injection=enabled
+  labels:
+    azure-key-vault-env-injection=enabled
