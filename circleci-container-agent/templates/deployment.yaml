@@ -79,7 +79,7 @@ spec:
             - name: KUBE_TASK_POD_CONFIG
               value: /etc/container-agent/taskpods
             - name: KUBE_TOKEN_SECRETS
-              value: circleci-agent-token@azurekeyvault
+              value: {{- if .Values.agent.tokenSecrets }}{{ join "," .Values.agent.tokenSecrets }}{{- else }}{{ printf "%s-token" $fullName }}{{- end }}
             {{- with .Values.logging.image }}
             - name: KUBE_LOGGING_IMAGE
               value: "{{- if .registry -}}{{ .registry }}/{{- end -}}{{ .repository }}:{{ .tag }}"
