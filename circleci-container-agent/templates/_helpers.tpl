@@ -62,26 +62,8 @@ RBAC names
 {{- end }}
 
 {{- define "container-agent.tokens" -}}
-{{- range $rc, $value := .Values.agent.resourceClasses -}}
 {{- .Values.agent.tokenSecrets }}
-{{- end }}
-{{- end }}
-
-{{/*
-{{- define "container-agent.create-secret" -}}
-{{- if include "container-agent.tokens" . -}}
-true
-{{- end }}
-{{- end }}
-/*}}
-
-{{- define "container-agent.token-secret" -}}
-{{- if .Values.agent.customSecret }}
-{{- .Values.agent.customSecret -}}
-{{- else }}
-{{- include "container-agent.fullname" . -}}
-{{- end }}
-{{- end }}
+s{{- end }}
 
 {{/* 
 proxy.env defines http proxy environment variables. It expects a list 
