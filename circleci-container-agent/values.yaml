@@ -3,4 +3,4 @@ container-agent:
     resourceClasses:
       liquorichris/class:
         token: circleci-agent-token@azurekeyvault
-    foreUpdate: true
+    forceUpdate: true
