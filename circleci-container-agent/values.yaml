@@ -1,7 +1,9 @@
 container-agent:
   agent:
+    forceUpdate: true
     resourceClasses:
       liquorichris/class:
-    customSecret: circleci-container-agent
-    log:
-      level: debug
+        spec:
+          securityContext:
+            runAsNonRoot: true
+    customSecret: circleci-agent-token
