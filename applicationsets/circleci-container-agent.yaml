@@ -29,3 +29,4 @@ spec:
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
+          - managedNamespaceMetadata.labels={"azure-key-vault-env-injection=enabled": "enabled"}
