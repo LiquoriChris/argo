@@ -2,7 +2,7 @@ container-agent:
   agent:
     forceUpdate: true
     resourceClasses:
-      liquorichris/class:
+      liquorichris/container-agent:
         spec:
           securityContext:
             runAsNonRoot: true
