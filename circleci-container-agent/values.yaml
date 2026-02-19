@@ -1,5 +1,6 @@
 container-agent:
   agent:
+    azure.workload.identity/use: "true"
     forceUpdate: true
     resourceClasses:
       liquorichris/container-agent:
