@@ -78,9 +78,7 @@ spec:
               value: {{ .Release.Namespace | quote }}
             - name: KUBE_TASK_POD_CONFIG
               value: /etc/container-agent/taskpods
-            - name: KUBE_TOKEN_SECRETS
-              value: ""
-            - name: KUBE_KEYVAULT_SECRET
+            - name: liquorichris.container-agent
               value: circleci-agent-token@azurekeyvault
             {{- with .Values.logging.image }}
             - name: KUBE_LOGGING_IMAGE
