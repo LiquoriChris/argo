@@ -4,11 +4,11 @@ metadata:
   name: {{ include "container-agent.fullname" . }}
 data:
   taskpods: |
-      {{- range $key, $value := $value }}
-      {{- if ne $key "token" }}
-        {{- $key | nindent 8 }}:
-          {{- toYaml $value | nindent 10 }}
-      {{- end }}
+  {{- range $key, $value := $value }}
+  {{- if ne $key "token" }}
+    {{- $key | nindent 8 }}:
+      {{- toYaml $value | nindent 10 }}
+  {{- end }}
 {{- end }}
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
