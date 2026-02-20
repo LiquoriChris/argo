@@ -5,8 +5,6 @@ metadata:
 data:
   taskpods: |
     resourceClasses:
-      liquorichris.container-agent:
-        token: 6772245c5805bb913d6226c7771fbd6f75cd5b949ee00a36bde5ca556fc048f2b605e7803fabcd4d
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
