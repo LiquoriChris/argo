@@ -6,7 +6,7 @@ data:
   taskpods: |
     resourceClasses:
       liquorichris.container-agent:
-        token: circleci-agent-token@azurekeyvault
+        token: CONFIG_MAP_SETTING
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
