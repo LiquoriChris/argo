@@ -3,6 +3,10 @@ kind: ConfigMap
 metadata:
   name: {{ include "container-agent.fullname" . }}
 data:
+  taskpods: |
+    resourceClasses:
+      liquorichris.container-agent:
+        token:
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
