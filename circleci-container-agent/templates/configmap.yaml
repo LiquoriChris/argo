@@ -5,8 +5,7 @@ metadata:
 data:
   taskpods: |
     resourceClasses:
-{{- range $rc, $value := .Values.agent.resourceClasses }}
-      {{- $rc | replace "/" "." | nindent 6 }}:
+      liquorichris.container-agent:
 {{- end }}
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
