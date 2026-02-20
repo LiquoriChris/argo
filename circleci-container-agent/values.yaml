@@ -194,7 +194,8 @@ agent:
   # -- Resource class settings. The tokens specified here will be used to claim tasks & the tasks
   # will be launched with the configured configs
   # Ref: https://circleci.com/docs/container-runner/#resource-class-configuration-custom-pod
-  # resourceClasses:
+  resourceClasses:
+    liquorichris/container-agent:
     #   token: XXXX
     #   metadata:
     #     annotations:
