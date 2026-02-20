@@ -3,8 +3,6 @@ kind: ConfigMap
 metadata:
   name: {{ include "container-agent.fullname" . }}
 data:
-  taskpods: |
-    resourceClasses:
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
