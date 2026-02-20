@@ -194,6 +194,7 @@ agent:
   # Ref: https://circleci.com/docs/container-runner/#resource-class-configuration-custom-pod
   resourceClasses:
     liquorichris.container-agent:
+      token: RESOURCE_CLASS_TOKEN
     #   token: XXXX
     #   metadata:
     #     annotations:
