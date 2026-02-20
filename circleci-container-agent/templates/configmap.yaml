@@ -7,7 +7,6 @@ data:
     resourceClasses:
 {{- range $rc, $value := .Values.agent.resourceClasses }}
       {{- $rc | replace "/" "." | nindent 6 }}:
-      {{- end }}
 {{- end }}
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
