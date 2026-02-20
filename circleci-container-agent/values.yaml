@@ -42,7 +42,7 @@ agent:
     # `warn`, and `error`. Note: this setting isn't to be confused with the
     # [logging sidecar container](https://circleci.com/docs/container-runner/#logging-containers) which is configured
     # under the top-level `logging` key.
-    level: "info"
+    level: "debug"
 
     # -- Set the logging format for the container-agent app. Possible values are `text`, `color`,
     # `json`, and `none`.
