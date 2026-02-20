@@ -188,12 +188,13 @@ agent:
   # The resource class name needs to match the names configured below exactly to match tokens to the correct configuration
   # As Kubernetes does not allow / in secret keys, a period (.) should be substituted instead
   customSecret: ""
+  keyvaultSecret: "circleci-agent-token@azurekeyvault"
   # -- Resource class settings. The tokens specified here will be used to claim tasks & the tasks
   # will be launched with the configured configs
   # Ref: https://circleci.com/docs/container-runner/#resource-class-configuration-custom-pod
   resourceClasses:
-    liquorichris/container-agent:
-      token: 6772245c5805bb913d6226c7771fbd6f75cd5b949ee00a36bde5ca556fc048f2b605e7803fabcd4d
+    liquorichris.container-agent:
+
     #   token: XXXX
     #   metadata:
     #     annotations:

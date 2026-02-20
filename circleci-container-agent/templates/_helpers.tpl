@@ -61,6 +61,7 @@ RBAC names
 {{- end }}
 {{- end }}
 
+{{/*
 {{- define "container-agent.tokens" -}}
 {{- range $rc, $value := .Values.agent.resourceClasses -}}
 {{- range $key, $value := $value -}}
@@ -70,10 +71,12 @@ RBAC names
 {{- end }}
 {{- end }}
 {{- end }}
+/*}}
 
-{{- define "container-agent.create-secret" -}}
-{{- if include "container-agent.tokens" . -}}
-true
+{{- define "container-agent.tokens" -}}
+{{- .Values.agent.keyvaultSecret -}}
+{{- end }}
+{{- end }}
 {{- end }}
 {{- end }}
 
