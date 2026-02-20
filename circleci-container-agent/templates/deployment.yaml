@@ -78,7 +78,7 @@ spec:
               value: {{ .Release.Namespace | quote }}
             - name: KUBE_TASK_POD_CONFIG
               value: /etc/container-agent/taskpods
-            - name: TOKEN
+            - name: KUBE_TOKEN
               value: {{ .Values.agent.keyvaultSecret | quote }}
             {{- with .Values.logging.image }}
             - name: KUBE_LOGGING_IMAGE
