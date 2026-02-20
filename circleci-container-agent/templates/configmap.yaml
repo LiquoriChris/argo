@@ -6,7 +6,7 @@ data:
   taskpods: |
     resourceClasses:
       liquorichris.container-agent:
-        token: KEYVAULT_SECRET_NAME
+        token: KUBE_TOKEN_KEYVAULT_SECRET
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
