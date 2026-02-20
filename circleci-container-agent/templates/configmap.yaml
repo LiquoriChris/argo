@@ -5,8 +5,7 @@ metadata:
 data:
   taskpods: |
     resourceClasses:
-      liquorichris.container-agent:
-{{- end }}
+      liquorchris.container-agent:
     {{- if .Values.orchestrator.resources }}
     runnerInitResources:
       {{- toYaml .Values.orchestrator.resources | nindent 6 }}
